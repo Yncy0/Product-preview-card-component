@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+:root {
+    --cl-dark-cyan: hsl(158, 36%, 37%);
+    --cl-very-dark-cyan: hsl(158, 36%, 20%);
+    --cl-cream: hsl(30, 38%, 92%);
+
+    --cl-very-dark-blue: hsl(212, 21%, 14%);
+    --cl-dark-grey-blue: hsl(228, 12%, 48%);
+    --cl-white: hsl(0, 0%, 100%);
+
+    --font-size: 0.875rem;
+
+    --ff-montserrat: "Montserrat", sans-serif;
+    --ff-fraunces: "Fraunces", serif;
+
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: var(--font-size);
+    background-color: var(--cl-cream);
+    margin: 1rem;
+    display: grid;
+    place-content: center;
+
+    line-height: 1.7;
+}
+
+h1 {
+    font-family: var(--ff-fraunces);
+    line-height: 1.1;
+}
+
+p {
+    font-family: var(--ff-montserrat);
+    color: var(--cl-dark-grey-blue);
+    font-weight: var(--fw-medium);
+}
+
+.product-preview{
+    max-width: 730px;
+    display: grid;
+    background-color: var(--cl-white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media (min-width: 600px){
+    .product-preview{
+        grid-template-columns: 1fr 1fr;
+        border-radius: 8px;
+    }
+}
+
+.box{
+    display: grid;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.category{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.flex-price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price{
+    font-family: var(--ff-fraunces);
+    font-size: 2rem;
+    color: var(--cl-dark-cyan);
+}
+
+.bt-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cl-dark-cyan);
+    color: var(--cl-white);
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-bold);
+    height: 50px;
+    cursor: pointer;
+}
+
+.bt-cart:active{
+    background-color: var(--cl-very-dark-cyan);
+}
